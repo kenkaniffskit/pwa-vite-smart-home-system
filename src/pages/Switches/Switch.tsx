@@ -37,16 +37,16 @@ const Switch = ({ name, node }: Props) => {
 				onClick={() => {
 					handleClick();
 				}}
-				className={`flex flex-col p-16 border rounded-full ${
+				className={`flex flex-col p-10 border rounded-full ${
 					toggle ? "bg-green-100 border-green-200" : "bg-red-100 border-red-200"
 				} items-center justify-center aspect-square rounded-full space-y-1`}
 			>
 				{/* Icon here */}
 				<div>
 					{toggle ? (
-						<TbBulbFilled size={45} className="text-green-800" />
+						<TbBulbFilled size={40} className="text-green-800" />
 					) : (
-						<TbBulbOff className="text-red-800" size={45} />
+						<TbBulbOff className="text-red-800" size={40} />
 					)}
 				</div>
 				<p
