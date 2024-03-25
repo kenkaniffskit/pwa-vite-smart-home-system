@@ -3,14 +3,13 @@ import { initializeAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-	apiKey: "AIzaSyBIxRO10QLMVMbN65q2vCyH8jZPbIEQyO4",
-	authDomain: "smart-home-iot-auth.firebaseapp.com",
-	databaseURL:
-		"https://smart-home-iot-auth-default-rtdb.asia-southeast1.firebasedatabase.app",
-	projectId: "smart-home-iot-auth",
-	storageBucket: "smart-home-iot-auth.appspot.com",
-	messagingSenderId: "1022327188094",
-	appId: "1:1022327188094:web:99957648d6389c4102462f",
+	apiKey: import.meta.env.VITE_API_KEY,
+	authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+	databaseURL: import.meta.env.VITE_DATABASE_URL,
+	projectId: import.meta.env.VITE_PROJECT_ID,
+	storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+	messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+	appId: import.meta.env.VITE_APP_ID,
 };
 
 const FIREBASE_APP = initializeApp(firebaseConfig);
