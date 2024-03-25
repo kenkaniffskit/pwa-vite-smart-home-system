@@ -21,7 +21,7 @@ const Sidebar = ({ toggle, setToggle, handleClick }: Props) => {
 	const { pathname } = useLocation();
 
 	const user = localStorage.getItem("user");
-	const { email } = JSON.parse(user);
+	const { email } = JSON.parse(user as string);
 
 	const data = [
 		{ name: "Home", route: "/", icon: <IoHomeSharp size={20} /> },

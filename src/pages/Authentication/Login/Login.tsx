@@ -5,7 +5,7 @@ import { TbHomeBolt } from "react-icons/tb";
 import { IoEye, IoEyeOffOutline } from "react-icons/io5";
 import { LoginSchema, LoginSchemaType } from "../LoginSchema";
 import { Link, useNavigate } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, User } from "firebase/auth";
 import { FIREBASE_AUTH } from "../../../lib/firebase/firebaseConfig";
 
 const Login = () => {
@@ -36,8 +36,8 @@ const Login = () => {
 				email,
 				password
 			);
-			const user = userCredential.user;
-			localStorage.setItem("token", user.accessToken);
+			const user: User = userCredential.user;
+			localStorage.setItem("token", await user.getIdToken());
 			localStorage.setItem("user", JSON.stringify(user));
 			navigate("/");
 		} catch (error) {
