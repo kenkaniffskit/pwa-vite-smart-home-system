@@ -23,4 +23,22 @@ export const data = [
 		node: "LIGHT_4",
 		icon: { on: "lightbulb-on", off: "lightbulb-off-outline" },
 	},
+	{
+		id: 5,
+		name: "Network 1",
+		node: "NETWORK_1",
+		icon: { on: "lightbulb-on", off: "lightbulb-off-outline" },
+	},
+	{
+		id: 6,
+		name: "Network 2",
+		node: "NETWORK_2",
+		icon: { on: "lightbulb-on", off: "lightbulb-off-outline" },
+	},
+	{
+		id: 7,
+		name: "Fan",
+		node: "FAN_1",
+		icon: { on: "lightbulb-on", off: "lightbulb-off-outline" },
+	},
 ];

@@ -30,7 +30,7 @@ const Switch = ({ name, node }: Props) => {
 	}, [setToggle, node]);
 
 	return (
-		<div className="w-full flex flex-col justify-center items-center">
+		<div className="w-full aspect-square flex flex-col justify-center items-center">
 			<p className="font-bold text-slate-800 text-start mb-2 text-sm">{name}</p>
 			<button
 				type="button"
