@@ -8,11 +8,7 @@ const Dashboard = () => {
 		setToggle(!toggle);
 	};
 
-	const data = [
-		"Temp & Humidity Sensor",
-		"Gas & Smoke Sensor",
-		"Motion Sensor",
-	];
+	const data = ["Temp & Humidity Sensor"];
 
 	return (
 		<>

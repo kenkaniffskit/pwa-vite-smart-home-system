@@ -4,7 +4,6 @@ import { ref, set } from "firebase/database";
 import { useEffect, useState } from "react";
 import { FIREBASE_DB } from "../lib/firebase/firebaseConfig";
 import useFirebase from "./useFirebase";
-// import { AlanButtonOptions } from "@alan-ai/alan-sdk-web/dist/AlanButtonOptions";
 
 const useAlan = () => {
 	const [alanInstance, setAlanInstance] = useState<AlanButton>();
@@ -14,7 +13,7 @@ const useAlan = () => {
 		if (alanInstance != null) return;
 		setAlanInstance(
 			alanBtn({
-				key: "e8b52d4a7288382712398abd34db2b772e956eca572e1d8b807a3e2338fdd0dc/stage",
+				key: "dc17a27e58cf7b5507f1e21db40721bf2e956eca572e1d8b807a3e2338fdd0dc/stage",
 				onCommand: ({ command }: any) => {
 					if (command == "on-light-1") {
 						console.log(`command: ${command}`);
@@ -118,7 +117,7 @@ const useAlan = () => {
 				},
 			})
 		);
-	}, []);
+	}, [alanInstance, isOpen]);
 	return null;
 };
 
